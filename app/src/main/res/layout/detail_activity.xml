@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/txtSname"
+        android:layout_width="401dp"
+        android:layout_height="wrap_content"
+        android:fontFamily = "@font/tnr"
+        android:text="TextView"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingTop = "20dp"
+        android:gravity = "center"/>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSname"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/img" />
+
+    <ImageButton
+        android:id="@+id/btnBackward"
+        android:padding = "0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="44dp"
+
+        android:src="@drawable/rw_button" />
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnBackward"
+
+        android:padding = "0dp"
+        android:layout_toRightOf="@+id/btnBackward"
+        android:src="@drawable/play_button" />
+    <ImageButton
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding = "0dp"
+        android:layout_alignTop="@+id/btnPlay"
+
+        android:layout_toRightOf="@+id/btnPlay"
+        android:src="@drawable/pause_button" />
+    <ImageButton
+        android:id="@+id/btnForward"
+        android:padding = "0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnPause"
+
+        android:layout_toRightOf="@+id/btnPause"
+        android:contentDescription="@+id/imageButton3"
+        android:src="@drawable/ff_button" />
+    <TextView
+        android:id="@+id/txtStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sBar"
+        android:text="0:00" />
+    <SeekBar
+        android:id="@+id/sBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnBackward"
+        android:layout_toLeftOf="@+id/txtSongTime"
+        android:layout_toRightOf="@+id/txtStartTime" />
+    <TextView
+        android:id="@+id/txtSongTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnForward"
+        android:layout_alignTop="@+id/sBar"
+        android:text="0:00" />
+</RelativeLayout>
